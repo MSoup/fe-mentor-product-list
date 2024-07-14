@@ -1,0 +1,11 @@
+#root {
+    padding: 12px;
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+    #root {
+        margin: 0 auto;
+        padding: 2rem;
+    }
+}
