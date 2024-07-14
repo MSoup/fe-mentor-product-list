@@ -8,4 +8,17 @@
         margin: 0 auto;
         padding: 2rem;
     }
+    .gallery-container {
+        border: solid;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .main-pane {
+        flex-grow: 1;
+    }
+    .side-pane {
+        border: solid;
+        padding: 12px;
+        min-width: 120px;
+    }
 }

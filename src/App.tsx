@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import "./App.css";
-import Gallery from "./Gallery";
+import Gallery from "./components/Gallery";
 import desserts from "./data.json";
 
 type Basket = {
@@ -31,14 +31,22 @@ function App() {
     const logBasketState = () => console.log(basket);
 
     return (
-        <>
-            <h1>Desserts</h1>
-            <Gallery
-                items={desserts}
-                handleAddToCart={handleAddToCart}
-                logBasketState={logBasketState}
-            ></Gallery>
-        </>
+        <div style={{ display: "flex" }}>
+            <div className={"main-pane"}>
+                <h1>Desserts</h1>
+
+                <Gallery
+                    items={desserts}
+                    handleAddToCart={handleAddToCart}
+                ></Gallery>
+            </div>
+            <div className="side-pane">
+                <p>
+                    Your Cart {Object.values(basket).reduce((a, b) => a + b, 0)}
+                </p>
+                <button onClick={() => logBasketState()}>Log State!</button>
+            </div>
+        </div>
     );
 }
 
