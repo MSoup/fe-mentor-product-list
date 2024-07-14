@@ -7,14 +7,7 @@ type DisplayItemProps = {
 
 const DisplayItem = ({ item, handleAddToCart }: DisplayItemProps) => {
     return (
-        <div
-            className="item-container"
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-            }}
-        >
+        <div className="item-container">
             <div
                 className="thumbnail-container"
                 style={{
@@ -23,17 +16,10 @@ const DisplayItem = ({ item, handleAddToCart }: DisplayItemProps) => {
                     alignItems: "center",
                 }}
             >
-                <div
-                    className={"thumbnail"}
-                    style={{
-                        border: "solid red",
-                        height: "120px",
-                        width: "120px",
-                    }}
-                >
+                <div className={"thumbnail"}>
                     <img
                         style={{ height: "100%", width: "100%" }}
-                        src={"./src/" + item.image.desktop}
+                        src={item.image.desktop}
                     />
                 </div>
                 <button
